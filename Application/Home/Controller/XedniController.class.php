@@ -11,7 +11,7 @@ class XedniController extends Controller {
 
     	// M('user')->select();
 
-        $this->display("index/index");
+        $this->display("index1/index");
     }
 
     public function funk(){
