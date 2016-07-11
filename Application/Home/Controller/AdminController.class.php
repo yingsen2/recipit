@@ -1,24 +1,24 @@
 <?php
+// 后台管理控制器
+
+// 实现对后台功能的分类和导航
+
 namespace Home\Controller;
 use Think\Controller;
-class AdminiController extends Controller {
+class AdminiController extends AdminiCommonController {
     
     // 初始化函数
     public function _initialize();
 
-    // 登陆逻辑
-    public function login();
+    // 后台首页
+    public function index();
 
-    // 登出逻辑
-    public function logout();
-
+    // 用户管理首页
+    public function user();
 }
 
 
 
 public function AdminiController::_initialize(){
-    $user_id = check_login_status();
-    if($user_id == 0){
-        $this->redirect('index/login');
-    }
+    parent::_initialize();
 }
