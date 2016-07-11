@@ -5,7 +5,7 @@
 
 namespace Home\Controller;
 use Think\Controller;
-class AdminiCommonController extends Controller {
+class AdminCommonController extends Controller {
     
     // 初始化函数
     public function _initialize();
