@@ -42,9 +42,10 @@ class IndexController extends Controller {
         $data = M('user')->where(array('account'=>$account))->find();
 
         if($data){
-            var_dump($data);
+            // var_dump($data);
+            $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
         }else{
-            echo "User not found!";
+            $this->ajaxReturn(array('status'=>2,'msg'=>'User not found!'),'json');
         }
     }
 
