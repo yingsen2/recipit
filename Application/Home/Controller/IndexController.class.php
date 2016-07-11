@@ -33,6 +33,23 @@ class IndexController extends Controller {
         $this->display('login');
     }
 
+    // 登陆逻辑
+    public function do_login(){
+        var_dump(I('post.'));
+        $account = I('post.username');
+        $password = I('post.password');
+
+        $data = M('user')->where(array('account'=>$account))->find();
+
+        if($data){
+            var_dump($data);
+        }else{
+            echo "User not found!";
+        }
+    }
+
+    
+
     public function logout(){
 
 
@@ -40,5 +57,10 @@ class IndexController extends Controller {
 
         
         $this->display('logout');
+    }
+
+    // 登出逻辑
+    public function do_logout(){
+        echo 1;
     }
 }

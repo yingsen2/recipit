@@ -4,6 +4,16 @@
 
 // 实现与用户账号相关的逻辑
 
+// create table user(
+// `id` int(11) not null auto_increment primary key,
+// `account` varchar(48) not null,
+// `password` varchar(48) not null,
+// 
+// `name` varchar(48) not null
+// 
+// )engine=myisam default charset=utf8;
+
+
 namespace Home\Controller;
 use Think\Controller;
 class UserController extends AdminCommonController {
@@ -38,15 +48,7 @@ class UserController extends AdminCommonController {
     }
 
 
-    // 登陆逻辑
-    public function login(){
-    	echo 1;
-    }
-
-    // 登出逻辑
-    public function logout(){
-    	echo 1;
-    }
+    
 }
 
 
