@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/login/Wopop_files/style.css">
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/login/Wopop_files/userpanel.css">
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/login/Wopop_files/jquery.ui.all.css">
-
+<script type="text/javascript" src="__PUBLIC__/assets/js/jquery.min.js"></script>
 </head>
 
 <body class="login" mycollectionplug="bind">
@@ -53,6 +53,12 @@
 				username:username,
 				password:userpwd
 			},function(response){
+        if(response.status == 1){
+          alert(response.msg);
+          window.location.href="<{:U('admin/index')}>"
+        }else{
+          alert(response.msg);
+        }
 				console.log(response);
 		},'json');
 
