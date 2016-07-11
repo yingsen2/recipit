@@ -5,20 +5,22 @@
 
 namespace Home\Controller;
 use Think\Controller;
-class AdminiController extends AdminiCommonController {
+class AdminController extends AdminCommonController {
     
     // 初始化函数
-    public function _initialize();
+    public function _initialize(){
+        parent::_initialize();
+    }
 
     // 后台首页
-    public function index();
+    public function index(){
+        $this->display("index");
+    }
 
     // 用户管理首页
-    public function user();
+    public function user(){
+        echo 1;
+    }
 }
 
 
-
-public function AdminiController::_initialize(){
-    parent::_initialize();
-}
