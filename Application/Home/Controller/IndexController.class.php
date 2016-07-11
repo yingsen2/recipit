@@ -30,7 +30,7 @@ class IndexController extends Controller {
 
 
 
-        this->display('login');
+        $this->display('login');
     }
 
     public function logout(){
@@ -39,6 +39,6 @@ class IndexController extends Controller {
 
 
         
-        this->display('logout');
+        $this->display('logout');
     }
 }
