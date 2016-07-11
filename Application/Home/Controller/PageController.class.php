@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class XedniController extends Controller {
+class PageController extends Controller {
     public function index(){
         // $this->show('hello world!');
     	// $a = 1;
@@ -10,8 +10,8 @@ class XedniController extends Controller {
     	// echo $c."&nbsp<br>";
 
     	// M('user')->select();
-
-        $this->display("index1/index");
+		
+		$this->display("index");
     }
 
     public function funk(){
