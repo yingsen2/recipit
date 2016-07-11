@@ -22,4 +22,23 @@ class IndexController extends Controller {
 
     	echo "fuck!";
     }
+
+
+    public function login(){
+
+
+
+
+
+        this->display('login');
+    }
+
+    public function logout(){
+
+
+
+
+        
+        this->display('logout');
+    }
 }
