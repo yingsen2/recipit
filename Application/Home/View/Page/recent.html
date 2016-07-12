@@ -13,35 +13,12 @@
 <link href='http://fonts.useso.com/css?family=Damion' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-<script src="__PUBLIC__/fourier/js/responsiveslides.min.js"></script>
- <script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	nav: true,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
-  </script>
-  <!--startsmothscrolling-->
-<script type="text/javascript" src="__PUBLIC__/fourier/js/move-top.js"></script>
-<script type="text/javascript" src="__PUBLIC__/fourier/js/easing.js"></script>
- <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
-		});
-	</script>
-<!--endsmothscrolling-->
+
 
 </head>
 <body>
 <!--header-->
-	<div class="header ">
+	<div class="header head-top">
 		<div class="container">
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
@@ -54,8 +31,7 @@
 							<span class="icon-bar"></span>
 						</button>				  
 						<div class="navbar-brand">
-						<br/>
-							<h2><a href="index.html" style="color:#ffffff">北邮有间餐厅</a></h2>
+							<h1><a href="index.html">Good Food</a></h1>
 						</div>
 					</div>
 
@@ -64,7 +40,7 @@
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="index.html">主页 <span class="sr-only">(current)</span></a></li>
 							<li><a href="about.html">关于我们</a></li>
-							<li><a href="#menu" class="scroll">菜单</a></li>
+							<li><a href="#menu" class="scroll">美食</a></li>
 								<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">美食展 <span class="caret"></span></a>
 									<ul class="dropdown-menu">
@@ -76,118 +52,19 @@
 							<!--<li><a href="codes.html">Codes</a></li>-->
 							<li><a href="recent.html">餐厅动态</a></li>
 							<li><a href="contact.html">留言板</a></li>
+						
 						</ul>
 								  
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
-			<div class="slider">
-				<div class="callbacks_container">
-					<ul class="rslides" id="slider">
-						 <li>	 
-							<div class="caption">
-							<div class="col-md-6 cap-img">
-							<img src="__PUBLIC__/fourier/images/p.png"  class="img-responsive" alt="/">
-							</div>
-							<div class="col-md-6 cap">
-								<h3>最美味的菜肴 </h3>  
-								<p>我们餐厅的食物都是采用最新鲜的食材和最好的工艺制作而成，搭配秘制的酱料，一定会让你有一个美好的就餐体验。</p>
-								<a class="button" data-toggle="modal" data-target="#myModal1" href="#">order online</a>
-							</div>
-							</div>
-							<div class="clearfix"></div>
-						 </li>
-						 <li>
-							<div class="caption">
-							<div class="col-md-6 cap-img">
-								<img src="__PUBLIC__/fourier/images/p1.png"  class="img-responsive" alt="/">
-							</div>
-							<div class="col-md-6 cap">
-								<h3>一次品味，一生铭记 </h3> 
-								<p>柔和的灯光，罗曼蒂克的氛围，耳边悠扬的钢琴声，演奏着优美的乐曲。餐桌上精美的食物，身边陪伴着你最爱的那个人，一切是这么的令人难忘。来到这里会满足你对西餐的一切美好体验，一定会让你不虚此行。</p>
-								<a class="button" data-toggle="modal" data-target="#myModal1" href="#">order online</a>
-							</div>
-							</div>
-							<div class="clearfix"></div>
-						</li>
-						 <li>	          
-							<div class="caption">
-							<div class="col-md-6 cap-img">
-							<img src="__PUBLIC__/fourier/images/p2.png"  class="img-responsive" alt="/">
-							</div>
-							<div class="col-md-6 cap">
-								<h3>不同节日，不同特色 </h3>
-								<p>情人节，感恩节，圣诞节，万圣节，复活节，不同的节日我们会准备不同的特色美食，使你能真切的感受到节日的氛围，在情人节和你的爱人来到我们的餐厅会享受半价的优惠，在圣诞节我们餐厅会为每一位顾客送出一份小礼物。</p>
-								<a class="button" data-toggle="modal" data-target="#myModal1" href="#">order online</a>
-							</div>
-							</div>
-							<div class="clearfix"></div>
-						 </li>
-						</li>
-					</ul>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 <!--header-->
 			<!--content-->
 				<div class="content">
-				<!--high-->
-					<div class="high-quality">
-						<div class="container">
-							<h3>美味的食物 </h3>
-							<h2>和 <span>高质量的</span> 服务</h2>
-							<p>我们的餐厅提供最优质的食材和最好的厨师，可以保证每一位来就餐的顾客能够品味到原汁原味的西餐，并且我们餐厅会为每一位顾客提供提供最优质的服务，保证良好的就餐氛围，除此之外，我们餐厅还会在不同的节日提供带有特色的菜肴，并且会不时的提供各种就餐优惠活动。会保证每一位顾客来到我们餐厅以后，后有一个很好的就餐体验。</p>
-						</div>
-					</div>
-					<!--high-->
-					<!--menu-->
-						<div class="feature-menu" id="menu">
-							<div class="container">
-								<h3><span>近期推荐</span> </h3>
-								<div class="feature-grids">
-									<div class="col-md-4 feature-grid">
-										<img src="__PUBLIC__/fourier/images/m1.png" class="img-responsive" alt="/">
-										<div class="rate ">
-											<h5>$9</h5>
-										</div>
-									</div>
-									<div class="col-md-4 feature-grid">
-									<img src="__PUBLIC__/fourier/images/m2.png" class="img-responsive" alt="/">
-									<div class="rate">
-											<h5>$10</h5>
-										</div>
-									</div>
-									<div class="col-md-4 feature-grid">
-									<img src="__PUBLIC__/fourier/images/m3.png" class="img-responsive" alt="/">
-									<div class="rate">
-											<h5>$9</h5>
-										</div>
-									</div>
-									<div class="col-md-4 feature-grid">
-									<img src="__PUBLIC__/fourier/images/m4.png" class="img-responsive" alt="/">
-									<div class="rate">
-											<h5>$9</h5>
-										</div>
-									</div>
-									<div class="col-md-4 feature-grid">
-									<img src="__PUBLIC__/fourier/images/m5.png" class="img-responsive" alt="/">
-									<div class="rate">
-											<h5>$11</h5>
-										</div>
-									</div>
-									<div class="col-md-4 feature-grid">
-									<img src="__PUBLIC__/fourier/images/m6.png" class="img-responsive" alt="/">
-									<div class="rate">
-											<h5>$12</h5>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					<!--menu-->
-					<!--post-->
+				
 					<div class="last-post">
 						<div class="container">
 							<h3><span>最近</span> 新菜</h3>
@@ -198,7 +75,8 @@
 										<h4>特色沙拉</h4>
 										<p>本款沙拉中包含最新鲜的时蔬和的水果，搭配上美味的沙拉和富有营养的鸡蛋，会带给你清爽的口感。</p>
 									</div>
-								</div>	
+								</div>
+							</br>
 								<div class="col-md-3 last-grid">
 									<div class="last1">
 										<a href="#" class="mask"><img src="__PUBLIC__/fourier/images/g5.jpg" alt="image" class="img-responsive zoom-img"></a>
@@ -206,6 +84,7 @@
 										<p>将细嫩的鸡肉和青椒，红椒一起混炒，在再淋上特制的酱油，一定会令你食指大动。</p>
 									</div>
 								</div>	
+							</br>
 								<div class="col-md-3 last-grid">
 									<div class="last1">
 										<a href="#" class="mask"><img src="__PUBLIC__/fourier/images/g2.jpg" alt="image" class="img-responsive zoom-img"></a>
@@ -213,6 +92,7 @@
 										<p>用从国外进口的最优质的火腿和优质芝士混合，再拌上新鲜时蔬，会使你想一尝再尝。</p>
 									</div>
 								</div>	
+							</br>
 								<div class="col-md-3 last-grid">
 									<div class="last1">
 										<a href="#" class="mask"><img src="__PUBLIC__/fourier/images/g4.jpg" alt="image" class="img-responsive zoom-img"></a>

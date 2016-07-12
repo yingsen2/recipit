@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Contact</title>
+<title>Gallery</title>
 <link href="__PUBLIC__/fourier/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="__PUBLIC__/fourier/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,17 @@
 <link href='http://fonts.useso.com/css?family=Damion' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<!--script-->
+	<script src="__PUBLIC__/fourier/js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="__PUBLIC__/fourier/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files-->
+	<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.gallery-grid a').Chocolat();
+		});
+	</script>
+<!--script-->
+
 </head>
 <body>
 <!--header-->
@@ -39,8 +50,8 @@
 							<li><a href="index.html">主页 <span class="sr-only">(current)</span></a></li>
 							<li><a href="about.html">关于我们</a></li>
 							<li><a href="index.html">美食</a></li>
-								<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">美食展<span class="caret"></span></a>
+								<li class="dropdown active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">美食展 <span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a href="gallery1.html">美食展 1</a></li>
 										<li><a href="gallery2.html">美食展 2</a></li>
@@ -48,7 +59,7 @@
 									</ul>
 								</li>
 							<li><a href="recent.html">餐厅动态</a></li>	
-							<li class="active"><a href="contact.html">留言板</a></li>
+							<li><a href="contact.html">留言板</a></li>
 						</ul>
 								  
 					</div><!-- /.navbar-collapse -->
@@ -60,33 +71,52 @@
 <!--header-->
 			<!--content-->
 				<div class="content">
-					<div class="contact">
+				<!-- gallery -->
+					<div class="gallery">
 						<div class="container">
-							<h2><span>Message Board</span></h2>
-							<!-- <div class="google-map col-lg-offset-2" >
-							   <iframe src="map.html"  width="600" height="300" frameborder="0" scrolling="no"></iframe>
-							</div> -->
-							<div></div>
-						<div class="contact-grids">
-							<div class="col-md-6 contact-right">
-								<form action="#" method="post">
-									<h5>名字</h5>
-									<input type="text" name="Name" >
-									<!-- <h5>邮箱地址</h5>
-									<input type="text" name="Email" > -->
-									<h5>留言</h5>
-									 <textarea name="Message" ></textarea>
-									 <input type="submit" value="send">
-								 </form>
+							<h2><span>Photo</span> Gallery</h2>
+							<div class="gallery-grids">
+								<div class="gallery-grid">
+									<a href="__PUBLIC__/fourier/images/tiandian.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian.jpg" alt=" " class="img-responsive" />
+									</a>
+									<a href="__PUBLIC__/fourier/images/tiandian1.jpeg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian1.jpeg" alt=" " class="img-responsive" />
+									</a>
+									<a href="__PUBLIC__/fourier/images/tiandian2.jpeg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian2.jpeg" alt=" " class="img-responsive" />
+									</a>
+								</div>
+								<div class="gallery-grid">
+									<a href="__PUBLIC__/fourier/images/tiandian3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian3.jpg" alt=" " class="img-responsive" />
+									</a>
+									<a href="__PUBLIC__/fourier/images/tiandian4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian4.jpg" alt=" " class="img-responsive" />
+									</a>
+									<a href="__PUBLIC__/fourier/images/tiandian5.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian5.jpg" alt=" " class="img-responsive" />
+									</a>
+									<a href="__PUBLIC__/fourier/images/tiandian6.jpeg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian6.jpeg" alt=" " class="img-responsive" />
+									</a>
+								</div>
+								<div class="gallery-grid">
+									<a href="__PUBLIC__/fourier/images/tiandian7.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian7.jpg" alt=" " class="img-responsive" />
+									</a>
+									<a href="__PUBLIC__/fourier/images/tiandian8.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian8.jpg" alt=" " class="img-responsive" />
+									</a>
+									<a href="__PUBLIC__/fourier/images/tiandian10.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+										<img src="__PUBLIC__/fourier/images/tiandian10.jpg" alt=" " class="img-responsive" />
+									</a>
+								</div>
+								<div class="clearfix"> </div>
 							</div>
-							<div class="col-md-6 contact-left">
-								<img src="images/canting.png">
-							</div>
-							<div class="clearfix"></div>
 						</div>
 					</div>
-				</div>
-
+				<!-- //gallery -->
 					<div class="footer-section">
 						<div class="container">
 							<div class="footer-grids">

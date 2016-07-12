@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/yingsen/recipit/Public/assets/ico/favicon.png">
+    <link rel="shortcut icon" href="/yingsen/Public/assets/ico/favicon.png">
 
     <title>Wilson_Tsang</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/yingsen/recipit/Public/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/yingsen/Public/assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/yingsen/recipit/Public/assets/css/main.css" rel="stylesheet">
+    <link href="/yingsen/Public/assets/css/main.css" rel="stylesheet">
     
-	<link rel="stylesheet" href="/yingsen/recipit/Public/assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/yingsen/Public/assets/css/font-awesome.min.css">
     
     <link href='https://fonts.gmirror.org/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.gmirror.org/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
     
-    <script src="/yingsen/recipit/Public/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/yingsen/recipit/Public/assets/js/smoothscroll.js"></script> 
-    <script src="/yingsen/recipit/Public/assets/js/Chart.js"></script>
+    <script src="/yingsen/Public/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/yingsen/Public/assets/js/smoothscroll.js"></script> 
+    <script src="/yingsen/Public/assets/js/Chart.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="/yingsen/recipit/Public/assets/js/html5shiv.js"></script>
-      <script src="/yingsen/recipit/Public/assets/js/respond.min.js"></script>
+      <script src="/yingsen/Public/assets/js/html5shiv.js"></script>
+      <script src="/yingsen/Public/assets/js/respond.min.js"></script>
     <![endif]-->
   </head>
 
@@ -57,7 +57,7 @@
 <!-- <div class="container">
 <div class="row">
 <div class="col-lg-12">
-<img src=".//yingsen/recipit/Public/assets/img/header-bg.jpg" alt="background" class="img-responsive right-block"> -->
+<img src=".//yingsen/Public/assets/img/header-bg.jpg" alt="background" class="img-responsive right-block"> -->
 	<div id="headerwrap">
 	<div class="container">
 			<div class="row centered">
@@ -94,7 +94,7 @@
 					
 				</div>
 				<div class="col-lg-3">
-				<imp ><a href="/yingsen/recipit/Public\15600917793.pdf" target="_blank"  style="color:#ffffff"><small>点击查看我的简历</small></a></imp>
+				<imp ><a href="/yingsen/Public\15600917793.pdf" target="_blank"  style="color:#ffffff"><small>点击查看我的简历</small></a></imp>
 					<!-- <p><a href="#"><i class="icon-file"></i></a> <sm>DOWNLOAD PDF</sm></p> -->
 				</div>
 				
@@ -285,28 +285,28 @@
    <!-- 轮播（Carousel）项目 -->
    <div class="carousel-inner">
       <div class="item active">
-         <img src="/yingsen/recipit/Public/assets/img\slide01.jpg" alt="First slide" >
+         <img src="/yingsen/Public/assets/img\slide01.jpg" alt="First slide" >
       </div>
       <div class="item">
-         <img src="/yingsen/recipit/Public/assets/img\slide02.jpg" alt="Second slide">
+         <img src="/yingsen/Public/assets/img\slide02.jpg" alt="Second slide">
       </div>
       <div class="item">
-         <img src="/yingsen/recipit/Public/assets/img\slide03.jpg" alt="Third slide">
+         <img src="/yingsen/Public/assets/img\slide03.jpg" alt="Third slide">
       </div>
        <div class="item">
-         <img src="/yingsen/recipit/Public/assets/img\slide04.jpg" alt="Fourth slide">
+         <img src="/yingsen/Public/assets/img\slide04.jpg" alt="Fourth slide">
       </div>
       <div class="item">
-         <img src="/yingsen/recipit/Public/assets/img\slide05.jpg" alt="Fifth slide">
+         <img src="/yingsen/Public/assets/img\slide05.jpg" alt="Fifth slide">
       </div>
       <div class="item">
-         <img src="/yingsen/recipit/Public/assets/img\slide06.jpg" alt="sixth slide">
+         <img src="/yingsen/Public/assets/img\slide06.jpg" alt="sixth slide">
       </div>
       <div class="item">
-         <img src="/yingsen/recipit/Public/assets/img\slide07.jpg" alt="seventh slide">
+         <img src="/yingsen/Public/assets/img\slide07.jpg" alt="seventh slide">
       </div>
       <div class="item">
-         <img src="/yingsen/recipit/Public/assets/img\slide08.jpg" alt="eighth slide">
+         <img src="/yingsen/Public/assets/img\slide08.jpg" alt="eighth slide">
       </div>
    </div>
    <!-- 轮播（Carousel）导航 -->
@@ -497,8 +497,8 @@
 					<div id="collapseTwo" class="panel-collapse collapse ">
 						<div class="panel-body">
 
-							<p><a href=".//yingsen/recipit/Public/assets/img/导入GITHUB.mp4" target="_blank"  style="color:#000000"><small>
-							<p><img class="img-responsive" src=".//yingsen/recipit/Public/assets/img/QQ截图20160709152136.png" alt=""></p>点击查看视频</small></a></p>
+							<p><a href=".//yingsen/Public/assets/img/导入GITHUB.mp4" target="_blank"  style="color:#000000"><small>
+							<p><img class="img-responsive" src=".//yingsen/Public/assets/img/QQ截图20160709152136.png" alt=""></p>点击查看视频</small></a></p>
 
 						</div>
 					</div>
@@ -530,7 +530,7 @@
 				<div class="col-lg-3"></div>
 			
 				<!-- <div class="col-lg-6">
-					<p><img class="img-responsive" src="/yingsen/recipit/Public/assets/img/port01.jpg" alt=""></p>
+					<p><img class="img-responsive" src="/yingsen/Public/assets/img/port01.jpg" alt=""></p>
 				</div>
 				<div class="col-lg-3">
 					<p>CANALS OF ENGLAND</p>
@@ -541,7 +541,7 @@
 	 -->
 	 <!-- 
 				<div class="col-lg-6 col-lg-offset-3">
-					<p><img class="img-responsive" src="/yingsen/recipit/Public/assets/img/port02.jpg" alt=""></p>
+					<p><img class="img-responsive" src="/yingsen/Public/assets/img/port02.jpg" alt=""></p>
 				</div>
 				<div class="col-lg-3">
 						<p>SANKEY</p>
@@ -551,7 +551,7 @@
 				</div>
 				
 				<div class="col-lg-6 col-lg-offset-3">
-					<p><img class="img-responsive" src="/yingsen/recipit/Public/assets/img/port03.jpg" alt=""></p>
+					<p><img class="img-responsive" src="/yingsen/Public/assets/img/port03.jpg" alt=""></p>
 				</div>
 				<div class="col-lg-3">
 						<p>WE GROW</p>
@@ -631,6 +631,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/yingsen/recipit/Public/assets/js/bootstrap.js"></script>
+    <script src="/yingsen/Public/assets/js/bootstrap.js"></script>
   </body>
 </html>

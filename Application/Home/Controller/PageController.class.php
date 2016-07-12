@@ -1,6 +1,5 @@
-// this is home page!
 <?php
-
+// this is home page!
 namespace Home\Controller;
 use Think\Controller;
 class PageController extends Controller {
