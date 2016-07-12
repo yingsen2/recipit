@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/login/Wopop_files/style.css">
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/login/Wopop_files/userpanel.css">
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/login/Wopop_files/jquery.ui.all.css">
-
+<script type="text/javascript" src="__PUBLIC__/assets/js/jquery.min.js"></script>
 </head>
 
 <body class="login" mycollectionplug="bind">
@@ -44,24 +44,26 @@
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){
 
-$("#button").click(function(){
-    var username = $("#username").val();
-    var userpwd = $("#userpwd").val();
-    var url = "<{:U('index/do_login')}>";
-    $.post(url,
-      {
-        username:username,
-        password:userpwd
-      },function(response){
-        console.log(response);
-    },'json');
+	$("#button").click(function(){
+		var username = $("#username").val();
+		var userpwd = $("#userpwd").val();
+		var url = "<{:U('index/do_login')}>";
+		$.post(url,
+			{
+				username:username,
+				password:userpwd
+			},function(response){
+        if(response.status == 1){
+          alert(response.msg);
+          window.location.href="<{:U('admin/index')}>"
+        }else{
+          alert(response.msg);
+        }
+				console.log(response);
+		},'json');
 
-  });
-  
-});
-	
+	});
 
 </script>
 

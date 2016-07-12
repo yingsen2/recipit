@@ -35,7 +35,7 @@ class IndexController extends Controller {
 
     // 登陆逻辑
     public function do_login(){
-        var_dump(I('post.'));
+        // var_dump(I('post.'));
         $account = I('post.username');
         $password = I('post.password');
 
@@ -43,6 +43,7 @@ class IndexController extends Controller {
 
         if($data){
             // var_dump($data);
+            session('user_id',$data['id']);
             $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
         }else{
             $this->ajaxReturn(array('status'=>2,'msg'=>'User not found!'),'json');
@@ -62,6 +63,6 @@ class IndexController extends Controller {
 
     // 登出逻辑
     public function do_logout(){
-        echo 1;
+        sessino(null);
     }
 }
