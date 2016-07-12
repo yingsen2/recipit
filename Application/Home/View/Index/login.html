@@ -44,19 +44,24 @@
   </div>
 </div>
 <script type="text/javascript">
-	$("#button").click(function(){
-		var username = $("#username").val();
-		var userpwd = $("#userpwd").val();
-		var url = "<{:U('index/do_login')}>";
-		$.post(url,
-			{
-				username:username,
-				password:userpwd
-			},function(response){
-				console.log(response);
-		},'json');
+$(document).ready(function(){
 
-	});
+$("#button").click(function(){
+    var username = $("#username").val();
+    var userpwd = $("#userpwd").val();
+    var url = "<{:U('index/do_login')}>";
+    $.post(url,
+      {
+        username:username,
+        password:userpwd
+      },function(response){
+        console.log(response);
+    },'json');
+
+  });
+  
+});
+	
 
 </script>
 
