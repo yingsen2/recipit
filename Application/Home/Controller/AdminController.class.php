@@ -19,7 +19,16 @@ class AdminController extends AdminCommonController {
 
     // 用户管理首页
     public function user(){
-        echo 1;
+        $user_list = M('user')->select();
+        $this->assign('user_list',$user_list);
+        $this->display();
+    }
+
+    // 图片管理
+    public function img(){
+        $img_list = M('img')->where(array('type' => 1))->select();
+        $this->assign('img_list', $img_list);
+        $this->display();
     }
 }
 

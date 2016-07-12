@@ -63,6 +63,57 @@ class IndexController extends Controller {
 
     // 登出逻辑
     public function do_logout(){
-        sessino(null);
+        session(null);
+    }
+
+
+
+
+
+    // 发布评论
+    public function mkcomment(){
+        $name = I('post.name');
+        $content = I('post.content');
+        $time = time();
+        $user_id = 0;
+        $blog_id = 0;
+
+        if(!$name || !$content){
+            $this->ajaxReturn(array('status'=>2,'msg'=>'内容不完整'),'json');
+        }
+
+        
+
+        M('comment')->data(array(
+            'name'=>$name, 
+            'content' => $content, 
+            'time' => $time,
+            'user_id' => $user_id,
+            'blog_id' => $blog_id
+            ))->add();
+
+        $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
+
+
+        /* 
+        //备用
+
+        $data = M('comment')->where(array('blog_id'=>0))->select();
+        foreach($data as $key=>$value){
+            $data[$key]['time'] = date('Y-m-d H:i:s', $value['time']); 
+        }
+        $this->assign('comment_list',$data);
+        $this->display();
+
+
+        <foreach name="list" item="vo">
+            {$vo.name}
+            {$vo.time}
+            {$vo.content}
+        </foreach>
+
+        */
+
+
     }
 }
