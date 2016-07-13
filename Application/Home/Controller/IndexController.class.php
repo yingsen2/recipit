@@ -65,4 +65,36 @@ class IndexController extends Controller {
     public function do_logout(){
         session(null);
     }
+
+
+
+
+
+    // 发布评论
+    public function mkcomment(){
+        $name = I('post.name');
+        $content = I('post.content');
+        $time = time();
+        $user_id = 0;
+        $blog_id = 0;
+
+        if(!$name || !$content){
+            $this->ajaxReturn(array('status'=>2,'msg'=>'内容不完整'),'json');
+        }
+
+        
+
+        M('comment')->data(array(
+            'name'=>$name, 
+            'content' => $content, 
+            'time' => $time,
+            'user_id' => $user_id,
+            'blog_id' => $blog_id
+            ))->add();
+
+        $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
+
+
+
+    }
 }

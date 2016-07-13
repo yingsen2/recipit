@@ -30,3 +30,15 @@ create table comment(
 )engine=myisam default charset=utf8;
 
 
+create table img(
+`id` int(11) auto_increment primary key not null,
+`path` varchar(128) not null,
+`type` int(4) default 1
+
+)engine=myisam default charset=utf8;
+
+create table img_display(
+`id` int(11) auto_increment primary key not null,
+`img_id` int(11) not null,
+`display_place` int(4) default 1 
+)engine=myisam default charset=utf8;
