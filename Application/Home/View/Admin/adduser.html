@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>添加新菜</title>
+    <title>添加管理员</title>
 
     <!-- Bootstrap core CSS -->
     <link href="__PUBLIC__/admin/css/bootstrap.css" rel="stylesheet">
@@ -38,12 +38,9 @@
           <ul class="nav navbar-nav side-nav">
             <li ><a href="index.html"><i class="fa fa-dashboard"></i> 管理员信息</a></li>
             <li><a href="tables.html"><i class="fa fa-table"></i> 评论管理</a></li>
-            <li class="active"><a href="forms.html"><i class="fa fa-edit"></i> 添加新菜</a></li>
-
-            <li><a href="cuisine.html"><i class="fa fa-wrench"></i>最近新菜</a></li>
-
-               <li ><a href="adduser.html"><i class="fa fa-wrench"></i>新增管理员</a></li>
-
+            <li ><a href="forms.html"><i class="fa fa-edit"></i> 添加新菜</a></li>
+            <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i>最近新菜</a></li>
+             <li class="active"><a href="adduser.html"><i class="fa fa-wrench"></i>新增管理员</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-user">
@@ -53,7 +50,7 @@
               <ul class="dropdown-menu">
                 
                 
-                <li><a href="<{:U('index/logout')}>"><i class="fa fa-power-off"></i> Log Out</a></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
               </ul>
             </li>
           </ul>
@@ -64,10 +61,10 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>添加新菜 </h1>
+            <h1>新增管理员 </h1>
             <ol class="breadcrumb">
               <li><a href="index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
-              <li class="active"><i class="fa fa-edit"></i> 添加新菜</li>
+              <li class="active"><i class="fa fa-edit"></i> 新增管理员</li>
             </ol>
             
           </div>
@@ -76,27 +73,29 @@
         <div class="row">
           <div class="col-lg-6">
 
-            <form target="xx" role="form" action="<{:U('cuisine/addcuisine')}>" enctype="multipart/form-data" method="POST">
+            <form target="xx" role="form" action="<{:U('user/adduser')}>" enctype="multipart/form-data" method="POST">
 
-              <div class="form-group">
-                <label>菜名</label>
+          <div class="form-group">
+                <label>账户名</label>
+                <input class="form-control" name="account">
+                <p class="help-block"></p>
+              </div>
+
+            
+          <div class="form-group">
+                <label>密码</label>
+                <input class="form-control" name="password1">
+                <p class="help-block"></p>
+              </div>
+
+              
+          <div class="form-group">
+                <label>姓名</label>
                 <input class="form-control" name="name">
                 <p class="help-block"></p>
               </div>
 
-              <div class="form-group">
-                <label>上传图片</label>
-                <input type="file" name="img_file">
-              </div>
 
-              <div class="form-group">
-                <label>输入介绍</label>
-                <textarea class="form-control" placeholder="please input content" rows="10" name="intro"></textarea>
-              </div>
-
-             <iframe name="xx">
-               
-             </iframe>
 
 <!--               <div class="form-group">
                 <label>推荐菜单序号</label>
@@ -118,11 +117,12 @@
  -->
 
 
-              <button type="submit" class="btn btn-default">确认上传</button>
-              <!-- <button type="reset" class="btn btn-default">重置</button>   -->
+              <button type="submit" class="btn btn-default">确认</button>
 
             </form>
-
+            <iframe name="xx">
+               
+             </iframe>
           </div>
           <div class="col-lg-6">
          

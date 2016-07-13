@@ -33,23 +33,26 @@ class UserController extends AdminCommonController {
 
     // 增加一个用户
     public function adduser(){
-        $username = I('post.username');
+        $username = I('post.account');
         $password = I('post.password');
         $name = I('post.name');
     	
 
         $user = M('user')->where(array('account'=>$username))->find();
         if($user){
-            $this->ajaxReturn(array('status'=>2,'msg'=>'username already exist, user id is '.$user['id']),'json');
+            // $this->ajaxReturn(array('status'=>2,'msg'=>'username already exist, user id is '.$user['id']),'json');
+            echo 'username already exist, user id is '.$user['id'];
+            return;
         }
 
         M('user')->data(array(
                 'account' => $username,
                 'password' => $password,
-                'name' => $name;
+                'name' => $name
             ))->add();
 
-        $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
+        // $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
+        echo 'success!';
     }
 
     // 删除一个用户
@@ -86,12 +89,12 @@ class UserController extends AdminCommonController {
         }
 
         if($password1 != $password2){
-            $this->ajaxReturn(array('status'=>3,'msg'=>'密码不一致'))
+            $this->ajaxReturn(array('status'=>3,'msg'=>'密码不一致'));
         }
 
         $user = M('user')->where(array('id'=>$user_id, 'password' => $password_old))->find();
         if(!$user){
-            $this->ajaxReturn(array('status'=>4,'msg'=>'密码不正确'),'json')
+            $this->ajaxReturn(array('status'=>4,'msg'=>'密码不正确'),'json');
         }
 
         M('user')->where(array('id'=>$user_id))->save(array('password'=>$password2));
@@ -111,7 +114,7 @@ class UserController extends AdminCommonController {
 
         $user = M('user')->where(array('id'=>$user_id))->find();
         if(!$user){
-            $this->ajaxReturn(array('status'=>4,'msg'=>'不存在该用户'),'json')
+            $this->ajaxReturn(array('status'=>4,'msg'=>'不存在该用户'),'json');
         }
 
         M('user')->where(array('id'=>$user_id))->save(array('name'=>$name));
