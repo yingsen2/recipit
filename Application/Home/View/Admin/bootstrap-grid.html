@@ -89,17 +89,30 @@
                               </tr> 
                           </thead>
                           <tbody>
-                              <tr>
-
-                                <td>01</td>
-                                <td>特色沙拉</td>
-                                <td><img src="__PUBLIC__/admin/images/g7.jpg" class="img-responsive" alt="picture1"></td>
-                                <td>本款沙拉中包含最新鲜的时蔬和的水果，搭配上美味的沙拉和富有营养的鸡蛋，会带给你清爽的口感。 </td>
-                                <td> <button type="privilege" class="btn btn-default">主页显示</button><br/>
-                                <button type="delete" class="btn btn-default">删除</button></td>
-
-                              </tr>
-                              <tr>
+                            <foreach name="cuisine_list" item="item">
+                              菜名：
+                              价格：
+                              <img src="<{$item.cuisine_img}>"/>
+                              介绍：<{$item.cuisine_intro}>
+                            
+                                <tr>
+                                  <td>01</td>
+                                  <td><{$item.cuisine_name}></td>
+                                  <td><{$item.cuisine_price}></td>
+                                  <td><img src="<{$item.cuisine_img}>" class="img-responsive" alt="picture1"></td>
+                                  <td><{$item.cuisine_intro}></td>
+                                  <td> 
+                                    <if condition="$item['is_show'] eq 1">
+                                      <button type="privilege" class="btn btn-default">主页显示</button>
+                                    </else>
+                                      <button type="privilege" class="btn btn-default" style="color:red;">主页不显示</button>
+                                    </if>
+                                    <br/>
+                                    <button type="delete" class="btn btn-default">删除</button>
+                                  </td>
+                                </tr>
+                              </foreach>
+                              <!-- <tr>
                                 <td>02</td>
                                 <td>双椒烧肉</td>
                                 <td><img src="__PUBLIC__/admin/images/g5.jpg" class="img-responsive" alt="picture2"></td>
@@ -122,7 +135,7 @@
                                 <td>将上好的北极虾用啤酒腌制放上24个小时，再通过杯子盛装，就形成了一道美味的菜肴。</td>
                                 <td> <button type="privilege" class="btn btn-default">主页显示</button><br/>
                                 <button type="delete" class="btn btn-default">删除</button></td>
-                              </tr>
+                              </tr> -->
                               
                           </tbody>
                         </table>

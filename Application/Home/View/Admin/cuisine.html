@@ -1,6 +1,213 @@
-<foreach name="cuisine_list" item="item">
-	菜名：<{$item.cuisine_name}>
-	价格：<{$item.cuisine_price}>
-	<img src="<{$item.cuisine_img}>"/>
-	介绍：<{$item.cuisine_intro}>
-</foreach>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>最近新菜</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="__PUBLIC__/admin/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="__PUBLIC__/admin/css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/admin/font-awesome/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">北邮有间餐厅</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li ><a href="index.html"><i class="fa fa-dashboard"></i> 管理员信息</a></li>
+            <li><a href="tables.html"><i class="fa fa-table"></i> 评论管理</a></li>
+            <li><a href="forms.html"><i class="fa fa-edit"></i> 添加新菜</a></li>
+            <li class="active"><a href="cuisine.html"><i class="fa fa-wrench"></i>最近新菜</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-user">
+       
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 退出 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                
+                
+                <li><a href="<{:U('index/logout')}>"><i class="fa fa-power-off"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    
+      <div id="page-wrapper">
+
+          <div class="row">
+          <div class="col-lg-12">
+            <h1>最近新菜 </h1>
+            <ol class="breadcrumb">
+              <li><a href="index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
+              <li class="active"><i class="fa fa-wrench"></i> 最近新菜</li>
+            </ol>
+            
+          </div>
+        </div><!-- /.row -->
+
+<div class="row">
+
+    <div class="col-lg-12 contact-left">
+                <div class="bs-example" data-example-id="panel-without-body-with-table">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">菜单列表</div>
+                
+                        <!-- Table -->
+                        <table class="table">
+                          <thead>
+                               <tr>
+                                <th align="left" width="5%">序号</th>
+                                <th align="left" width="10%">菜名</th>
+                                <th align="left" width="30%">图片</th>
+                                <th align="left" width="50%">介绍</th>
+                                <th align="left" width="5%">选择</th>
+                              </tr> 
+                          </thead>
+                          <tbody>
+                            <foreach name="cuisine_list" item="item">
+
+                            
+                                <tr>
+                                  <td><{$item.id}></td>
+                                  <td><{$item.cuisine_name}></td>
+                                  <td><img src="__PUBLIC__/uploads/<{$item.cuisine_img}>" class="img-responsive" alt="picture1"></td>
+                                  <td><{$item.cuisine_intro}></td>
+                                  <td> 
+                                    <if condition="$item.is_show eq 1">
+                                      <button type="privilege" class="btn btn-default" onclick="not_show_cuisine(<{$item.id}>)" style="color:red;">取消显示</button>
+                                    <else />
+                                      <button type="privilege" class="btn btn-default" onclick="show_cuisine(<{$item.id}>)"  >主页显示</button>
+                                    </if>
+                                    <br/>
+                                    <button type="delete" class="btn btn-default" onclick="del_cuisine(<{$item.id}>)">删除</button>
+                                  </td>
+                                </tr>
+                              </foreach>
+                              <script type="text/javascript">
+
+
+
+                              </script>
+                              <!-- <tr>
+                                <td>02</td>
+                                <td>双椒烧肉</td>
+                                <td><img src="__PUBLIC__/admin/images/g5.jpg" class="img-responsive" alt="picture2"></td>
+                                <td>将细嫩的鸡肉和青椒，红椒一起混炒，在再淋上特制的酱油，一定会令你食指大动。</td>
+                                <td> <button type="privilege" class="btn btn-default">主页显示</button><br/>
+                                <button type="delete" class="btn btn-default">删除</button></td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>火腿芝士焗饭</td>
+                                <td><img src="__PUBLIC__/admin/images/g2.jpg" class="img-responsive" alt="picture3"></td>
+                                <td>用从国外进口的最优质的火腿和优质芝士混合，再拌上新鲜时蔬，会使你想一尝再尝。</td>
+                                <td> <button type="privilege" class="btn btn-default">主页显示</button><br/>
+                                <button type="delete" class="btn btn-default">删除</button></td>
+                              </tr>
+                               <tr>
+                                <td>04</td>
+                                <td>啤酒杯虾</td>
+                                <td><img src="__PUBLIC__/admin/images/g4.jpg" class="img-responsive" alt="picture3"></td>
+                                <td>将上好的北极虾用啤酒腌制放上24个小时，再通过杯子盛装，就形成了一道美味的菜肴。</td>
+                                <td> <button type="privilege" class="btn btn-default">主页显示</button><br/>
+                                <button type="delete" class="btn btn-default">删除</button></td>
+                              </tr> -->
+                              
+                          </tbody>
+                        </table>
+                    </div>
+                    </div>
+                
+              <div class="col-lg-5 contact-left">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+  
+</div>  <!-- row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="__PUBLIC__/admin/js/jquery-1.10.2.js"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      function del_cuisine(id){
+        if (!confirm("确认要删除？")) {
+          return;
+        }
+        var url = "<{:U('cuisine/delcuisine')}>";
+        $.post(url,{
+          cuisine_id:id
+        },function(response){
+          console.log(response);
+          // alert(response.msg);
+          if(response.status == 1)
+            window.location.reload();
+          else
+            alert(response.msg);
+        },'json');
+
+
+      }
+
+      function show_cuisine(id){
+        var url = "<{:U('cuisine/showcuisine')}>";
+        $.post(url,{
+          cuisine_id:id
+        },function(response){
+          console.log(response);
+          // alert(response.msg);
+          if(response.status == 1)
+            window.location.reload();
+          else
+            alert(response.msg);
+        },'json');
+      }
+
+      function not_show_cuisine(id){
+        var url = "<{:U('cuisine/notshowcuisine')}>";
+        $.post(url,{
+          cuisine_id:id
+        },function(response){
+          console.log(response);
+          // alert(response.msg);
+          if(response.status == 1)
+            window.location.reload();
+          else
+            alert(response.msg);
+
+        },'json');
+      }
+
+    </script>
+
+  </body>
+</html>

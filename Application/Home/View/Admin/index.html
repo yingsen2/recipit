@@ -41,7 +41,7 @@
             <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> 管理员信息</a></li>
             <li><a href="tables.html"><i class="fa fa-table"></i> 评论管理</a></li>
             <li><a href="forms.html"><i class="fa fa-edit"></i> 添加新菜</a></li>
-            <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i>最近新菜</a></li>
+            <li><a href="cuisine.html"><i class="fa fa-wrench"></i>最近新菜</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-user">
@@ -51,7 +51,7 @@
               <ul class="dropdown-menu">
                 
                 
-                <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                <li><a href="<{:U('index/logout')}>"><i class="fa fa-power-off"></i> Log Out</a></li>
               </ul>
             </li>
           </ul>
@@ -74,11 +74,7 @@
 
 
         </div><!-- /.row -->
-<div class="col-lg-2">
-     
-     <img alt="profile-picture" src="__PUBLIC__/admin/images/profile-pic.jpg" />
-     
-     </div>
+
      <!-- <div class="col-lg-10"> -->
       <div class="col-lg-4 contact-left col-lg-offset-1">
                 <div class="bs-example" data-example-id="panel-without-body-with-table">
@@ -88,39 +84,37 @@
                 
                         <!-- Table -->
                         <table class="table">
-                          <thead>
-                             <!--  <tr>
-                                <th align="center" width="10%">用户</th>
-                                <th align="center" width="10%">邮箱</th>
-                                <th align="center" width="10%">时间</th>
-                                <th align="center" width="70%">评论</th>
-                              </tr> -->
-                          </thead>
-                          <tbody>
-                              <tr>
 
-                                <td>序号</td>
-                                <td>01</td>
+                          <foreach name="user_list" item="item">
 
-                              </tr>
-                              <tr>
-                                <td>姓名</td>
-                                <td>曾颖森</td>
-                              </tr>
-                              <tr>
-                                <td>权限</td>
-                                <td>管理员</td>
-                              </tr>
-                               <tr>
-                                <td>账号</td>
-                                <td>yingsen</td>
-                              </tr>
-                               <tr>
-                                <td>密码</td>
-                                <td>123456</td>
-                              </tr>
-                          </tbody>
+                            <div class="col-lg-2">
+                              <img alt="profile-picture" src="__PUBLIC__/admin/images/profile-pic.jpg" />
+                            </div>
+                            <tbody>
+                                <tr>
+                                  <td>序号</td>
+                                  <td><{$item.id}></td>
+                                </tr>
+                                <tr>
+                                  <td>姓名</td>
+                                  <td><{$item.name}></td>
+                                </tr>
+                                <tr>
+                                  <td>权限</td>
+                                  <td>管理员</td>
+                                </tr>
+                                 <tr>
+                                  <td>账号</td>
+                                  <td><{$item.account}></td>
+                                </tr>
+                                 <tr>
+                                  <td>密码</td>
+                                  <td><{$item.password}></td>
+                                </tr>
+                            </tbody>
+                          </foreach>
                         </table>
+
                     </div>
                     </div>
                 

@@ -11,6 +11,8 @@ class PageController extends Controller {
     	// echo $c."&nbsp<br>";
 
     	// M('user')->select();
+        $cuisine = M('cuisine')->where(array('is_show'=>1))->limit(6)->select();
+        $this->assign('cuisine_list',$cuisine);
 		
 		$this->display("index");
     }

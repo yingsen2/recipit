@@ -15,6 +15,7 @@ return array(
 	'DB_PREFIX' => '', // 数据库表前缀 
 	'DB_CHARSET'=> 'utf8', // 字符集
 	'DB_DEBUG'  =>  TRUE
+	// 'TMPL_PARSE_STRING'=>array('__UPLOADS__'=>'/yingsen/Uploads')
 
 
 );

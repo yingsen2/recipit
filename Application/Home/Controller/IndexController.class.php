@@ -39,7 +39,7 @@ class IndexController extends Controller {
         $account = I('post.username');
         $password = I('post.password');
 
-        $data = M('user')->where(array('account'=>$account))->find();
+        $data = M('user')->where(array('account'=>$account,'password'=>$password))->find();
 
         if($data){
             // var_dump($data);
@@ -53,17 +53,19 @@ class IndexController extends Controller {
     
 
     public function logout(){
-
+        session(null);
+        $this->redirect('page/index');
 
 
 
         
-        $this->display('logout');
+        // $this->display('logout');
     }
 
     // 登出逻辑
     public function do_logout(){
         session(null);
+        $this->redirect('page/index');
     }
 
 
