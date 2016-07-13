@@ -63,6 +63,6 @@ class IndexController extends Controller {
 
     // 登出逻辑
     public function do_logout(){
-        sessino(null);
+        session(null);
     }
 }
