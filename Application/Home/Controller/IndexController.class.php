@@ -95,8 +95,5 @@ class IndexController extends Controller {
         $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
 
 
-        
-
-
     }
 }

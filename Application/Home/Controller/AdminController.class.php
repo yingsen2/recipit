@@ -24,10 +24,10 @@ class AdminController extends AdminCommonController {
         $this->display();
     }
 
-    // 图片管理
-    public function img(){
-        $img_list = M('img')->where(array('type' => 1))->select();
-        $this->assign('img_list', $img_list);
+    // 菜品管理
+    public function cuisine(){
+        $img_list = M('cuisine')->select();
+        $this->assign('cuisine_list', $cuisine_list);
         $this->display();
     }
 
