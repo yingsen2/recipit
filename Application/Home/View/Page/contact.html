@@ -6,6 +6,10 @@
 <link href="__PUBLIC__/fourier/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- HTTP 1.1 -->  
+<meta http-equiv="pragma" content="no-cache">  
+<!-- HTTP 1.0 -->  
+<meta http-equiv="cache-control" content="no-cache">  
 <meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="__PUBLIC__/fourier/js/jquery-1.11.1.min.js"></script>
@@ -66,18 +70,47 @@
 							<!-- <div class="google-map col-lg-offset-2" >
 							   <iframe src="map.html"  width="600" height="300" frameborder="0" scrolling="no"></iframe>
 							</div> -->
-							<div></div>
+							<div>
+								
+								<foreach name="comment_list" item="vo">
+						            留言者：<{$vo.name}>
+						            留言时间：<{$vo.time}>
+						            留言内容：<{$vo.content}>
+						            <br>
+						        </foreach>
+
+
+
+							</div>
 						<div class="contact-grids">
 							<div class="col-md-6 contact-right">
 								<form action="#" method="post">
 									<h5>名字</h5>
-									<input type="text" name="Name" >
+									<input type="text" name="Name" id="name">
 									<!-- <h5>邮箱地址</h5>
 									<input type="text" name="Email" > -->
 									<h5>留言</h5>
-									 <textarea name="Message" ></textarea>
-									 <input type="submit" value="send">
+									 <textarea name="Message" id="content"></textarea>
+									 <input type="submit" value="send" id="btn_submit">
 								 </form>
+								 <script>
+								 	$(document).ready(function(){
+								 		$("#btn_submit").click(function(){
+								 			var name = $("#name").val();
+								 			var content = $("#content").val();
+								 			var url = "<{:U('index/mkcomment')}>";
+								 			$.post(url,{name:name,content:content},function(response){
+								 				console.log(response);
+								 				if(response.status == 1){
+								 					alert('成功');
+								 					window.location.reload();
+								 				}else{
+								 					alert(response.msg);
+								 				}
+								 			},'json');
+								 		})
+								 	})
+								 </script>
 							</div>
 							<div class="col-md-6 contact-left">
 								<img src="images/canting.png">

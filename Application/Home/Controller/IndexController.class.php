@@ -95,24 +95,7 @@ class IndexController extends Controller {
         $this->ajaxReturn(array('status'=>1,'msg'=>'success'),'json');
 
 
-        /* 
-        //备用
-
-        $data = M('comment')->where(array('blog_id'=>0))->select();
-        foreach($data as $key=>$value){
-            $data[$key]['time'] = date('Y-m-d H:i:s', $value['time']); 
-        }
-        $this->assign('comment_list',$data);
-        $this->display();
-
-
-        <foreach name="list" item="vo">
-            {$vo.name}
-            {$vo.time}
-            {$vo.content}
-        </foreach>
-
-        */
+        
 
 
     }

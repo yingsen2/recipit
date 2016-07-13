@@ -15,10 +15,15 @@ class PageController extends Controller {
 		$this->display("index");
     }
 
-    public function funk(){
+    public function contact(){
 
 
+        $data = M('comment')->select();
+        foreach($data as $key=>$value){
+            $data[$key]['time'] = date('Y-m-d H:i:s', $value['time']); 
+        }
+        $this->assign('comment_list',$data);
+        $this->display();
 
-    	echo "fuck!";
     }
 }

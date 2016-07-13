@@ -30,6 +30,15 @@ class AdminController extends AdminCommonController {
         $this->assign('img_list', $img_list);
         $this->display();
     }
+
+    // 评论管理
+    public function comment(){
+        $comment = M('comment')->select();
+        foreach($data as $key=>$value){
+            $data[$key]['time'] = date('Y-m-d H:i:s', $value['time']); 
+        }
+        $this->assign('comment_list',$data);
+    }
 }
 
 
