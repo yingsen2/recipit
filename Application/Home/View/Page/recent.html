@@ -70,7 +70,17 @@
 						<div class="container">
 							<h3><span>最近</span> 新菜</h3>
 							<div class="last-grids">
-								<div class="col-md-3 last-grid">
+							<foreach name="cuisine_list" item="item">
+									<div class="col-md-3 last-grid">
+										<div class="last1">
+											 <a href="#" class="mask"><img src="__PUBLIC__/uploads/<{$item.cuisine_img}>" alt="image" class="img-responsive zoom-img"></a>
+											<h4><{$item.cuisine_name}></h4>
+											<p><{$item.cuisine_intro}></p>
+										</div>
+									</div>	
+								</foreach>
+
+							<!-- 	<div class="col-md-3 last-grid">
 									<div class="last1">
 										 <a href="#" class="mask"><img src="__PUBLIC__/fourier/images/g7.jpg" alt="image" class="img-responsive zoom-img"></a>
 										<h4>特色沙拉</h4>
@@ -99,7 +109,7 @@
 										<a href="#" class="mask"><img src="__PUBLIC__/fourier/images/g4.jpg" alt="image" class="img-responsive zoom-img"></a>
 										<h4>啤酒杯虾</h4>
 										<p>将上好的北极虾用啤酒腌制放上24个小时，再通过杯子盛装，就形成了一道美味的菜肴。</p>
-									</div>
+									</div> -->
 								</div>	
 								<div class="clearfix"></div>
 							</div>

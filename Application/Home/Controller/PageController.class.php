@@ -28,4 +28,13 @@ class PageController extends Controller {
         $this->display();
 
     }
+
+    public function recent(){
+       
+        $cuisine = M('cuisine')->select();
+        $this->assign('cuisine_list',$cuisine);
+        
+        $this->display("recent");
+    }
+
 }
