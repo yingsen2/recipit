@@ -116,6 +116,22 @@
                               </foreach>
                               <script type="text/javascript">
 
+                                function del_user(id){
+                                  if (!confirm("确认要删除？")) {
+                                    return;
+                                  }
+                                  var url = "<{:U('user/deluser')}>";
+                                  $.post(url,{
+                                    user_id:id
+                                  },function(response){
+                                    console.log(response);
+                                    // alert(response.msg);
+                                    if(response.status == 1)
+                                      window.location.reload();
+                                    else
+                                      alert(response.msg);
+                                  },'json');
+                                }
 
 
                               </script>
