@@ -87,10 +87,9 @@ class IndexController extends Controller {
         
 
         M('comment')->data(array(
-            'name'=>$name, 
+            'user_name'=>$name, 
             'content' => $content, 
             'time' => $time,
-            'user_id' => $user_id,
             'blog_id' => $blog_id
             ))->add();
 

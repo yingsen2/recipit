@@ -77,46 +77,51 @@
 
         </div><!-- /.row -->
 
+
+
      <!-- <div class="col-lg-10"> -->
-      <div class="col-lg-4 contact-left col-lg-offset-1">
+
+     <div class="row">
+
+    <div class="col-lg-12 contact-left">
                 <div class="bs-example" data-example-id="panel-without-body-with-table">
                     <div class="panel panel-default">
                         <!-- Default panel contents -->
-                        <div class="panel-heading">管理员信息</div>
+                        <div class="panel-heading">管理员列表</div>
                 
                         <!-- Table -->
                         <table class="table">
+                          <thead>
+                               <tr>
+                                <th align="left" width="5%">序号</th>
+                                <th align="left" width="30%">姓名</th>
+                                <th align="left" width="30%">账号</th>
+                                <th align="left" width="30%">密码</th>
+                                <th align="left" width="5%">选择</th>
+                              </tr> 
+                          </thead>
+                          <tbody>
+                            <foreach name="user_list" item="item">
 
-                          <foreach name="user_list" item="item">
-
-                            <div class="col-lg-2">
-                              <img alt="profile-picture" src="__PUBLIC__/admin/images/profile-pic.jpg" />
-                            </div>
-                            <tbody>
+                            
                                 <tr>
-                                  <td>序号</td>
                                   <td><{$item.id}></td>
-                                </tr>
-                                <tr>
-                                  <td>姓名</td>
                                   <td><{$item.name}></td>
-                                </tr>
-                                <tr>
-                                  <td>权限</td>
-                                  <td>管理员</td>
-                                </tr>
-                                 <tr>
-                                  <td>账号</td>
                                   <td><{$item.account}></td>
-                                </tr>
-                                 <tr>
-                                  <td>密码</td>
                                   <td><{$item.password}></td>
+                                  <td> 
+                                    <button type="delete" class="btn btn-default" onclick="del_user(<{$item.id}>)">删除</button>
+                                  </td>
                                 </tr>
-                            </tbody>
-                          </foreach>
-                        </table>
+                              </foreach>
+                              <script type="text/javascript">
 
+
+
+                              </script>
+                            
+                          </tbody>
+                        </table>
                     </div>
                     </div>
                 
@@ -124,84 +129,18 @@
               </div>
               <div class="clearfix"></div>
             </div>
-          </div>
-     <!-- <table class="table table-bordered">
-   <caption ></caption>
-   <thead>
-      <tr>
-         <th>名称</th>
-         <th>城市</th>
-         <th>密码</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>Tanmay</td>
-         <td>Bangalore</td>
-         <td>560001</td>
-      </tr>
-      <tr>
-         <td>Sachin</td>
-         <td>Mumbai</td>
-         <td>400003</td>
-      </tr>
-      <tr>
-         <td>Uma</td>
-         <td>Pune</td>
-         <td>411027</td>
-      </tr>
-   </tbody>
-</table> -->
+
+  
+</div>  <!-- row -->
+
+     
 
    </div>
       </div><!-- /#page-wrapper -->
 
     </div><!-- /#wrapper -->
 
-<!-- information-body -->
-<!-- <div class="tab-content no-border padding-24">
-hello
-</div>
- -->
-<!--  <div id="page-wrapper">
- <div class="row">
-     <div class="col-lg-2 col-lg-offset-2">
-     
-     <img alt="profile-picture" src="images/profile-pic.jpg" />
-     
-     </div>
-     <div class="col-lg-8"></div>
-     <table class="table table-bordered">
-   <caption>个人信息</caption>
-   <thead>
-      <tr>
-         <th>名称</th>
-         <th>城市</th>
-         <th>密码</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>Tanmay</td>
-         <td>Bangalore</td>
-         <td>560001</td>
-      </tr>
-      <tr>
-         <td>Sachin</td>
-         <td>Mumbai</td>
-         <td>400003</td>
-      </tr>
-      <tr>
-         <td>Uma</td>
-         <td>Pune</td>
-         <td>411027</td>
-      </tr>
-   </tbody>
-</table>
 
-   </div>
-   </div>
-      </div><!-- /#page-wrapper -->
 
     </div><!-- /#wrapper -->
 
